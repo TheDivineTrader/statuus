@@ -98,7 +98,7 @@ def main(delay, mode):
         print("Invalid Mode\nPlease choose either [ Random ] or [ Order ]")
         return
 
-choice = input'Mode: [ Random / Order ]: ').lower()                                           # .gg/avix
+choice = input('Mode: [ Random / Order ]: ').lower()                                           # .gg/avix
 
 delay1 = float(input('Delay: '))                                           # .gg/avix
 
