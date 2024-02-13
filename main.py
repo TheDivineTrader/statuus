@@ -1,6 +1,4 @@
 import requests, random, httpx, os, time
-import colorama
-from colorama import Fore
 global infotoken                                           # .gg/avix
 
 infotoken = 'https://discord.com/api/v9/users/@me'                                           # .gg/avix
@@ -58,18 +56,11 @@ def headers(tokan):
 while True:
     os.system('cls' if os.name=='nt' else 'clear')
     global tukan
-    banner = ('''  ____  _        _               ____       _        _            
- / ___|| |_ __ _| |_ _   _ ___  |  _ \ ___ | |_ __ _| |_ ___ _ __ 
- \___ \| __/ _` | __| | | / __| | |_) / _ \| __/ _` | __/ _ \ '__|
-  ___) | || (_| | |_| |_| \__ \ |  _ < (_) | || (_| | ||  __/ |   
- |____/ \__\__,_|\__|\__,_|___/ |_| \_\___/ \__\__,_|\__\___|_|   
-                                                                  ''')     
-    print(Fore.CYAN + banner)
-    print(Fore.WHITE + '~ ' + Fore.RESET + 'Discord    :     @xyzdivine''\n' + Fore.WHITE + '~ ' + Fore.RESET + 'Server     :     discord.gg/emfddQ8j7X\n' + Fore.RESET)
-    tukan = input(Fore.BLUE + '- ' + Fore.RESET + 'Input Token: ')
+
+    tukan = input('Input Token: ')
     r = requests.get('https://discordapp.com/api/v9/users/@me/library', headers = headers(tukan))
     if r.status_code != 200:
-        print(Fore.WHITE + '- ' + Fore.RED + 'Invalid Token')
+        print('Invalid Token')
         time.sleep(1)                                           # .gg/avix
     else:
         break                                           # .gg/avix
@@ -82,7 +73,6 @@ def login():
 def main(delay, mode):
     statusurl = 'https://discord.com/api/v9/users/@me/settings'
     os.system('cls' if os.name=='nt' else 'clear')                                           # .gg/avix
-    print(Fore.CYAN + banner + Fore.RESET)
     print(f'- Logged In As {login()}')
     os.system('pause')                                           # .gg/avix
 
@@ -105,12 +95,12 @@ def main(delay, mode):
             bio_index += 1
             time.sleep(delay)
     else:                                           # .gg/avix
-        print("-" + Fore.RED + "Invalid Mode\nPlease choose either [ Random ] or [ Order ]")
+        print("Invalid Mode\nPlease choose either [ Random ] or [ Order ]")
         return
 
-choice = input(Fore.BLUE + '- ' + Fore.RESET + 'Mode: [ Random / Order ]: ').lower()                                           # .gg/avix
+choice = input'Mode: [ Random / Order ]: ').lower()                                           # .gg/avix
 
-delay1 = float(input(Fore.BLUE + '- ' + Fore.RESET + 'Delay: '))                                           # .gg/avix
+delay1 = float(input('Delay: '))                                           # .gg/avix
 
 if __name__ == '__main__':                                           # .gg/avix
     mode = choice
