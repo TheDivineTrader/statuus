@@ -66,8 +66,8 @@ while True:
         break                                           # .gg/avix
 
 def login():
-    reqinfo = requests.get(infotoken, headers=headers(tukan))                                           # .gg/avix
-
+    reqinfo = requests.get('https://discord.com/api/v9/users/@me', headers=headers(tukan))
+    reqinfo.raise_for_status()  # Make sure the request was successful
     return f'@{reqinfo.json()["username"]}'
 
 def main(delay, mode):
